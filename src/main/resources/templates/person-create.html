@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create person</title>
+</head>
+<body>
+<form action="#" th:action="@{/person-create}" th:object="${person}" method="post">
+    <label for="surname">surname</label>
+    <input type="text" th:field="*{surname}" id="surname" placeholder="Surname">
+    <label for="name">name</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Name">
+    <label for="patronymic">patronymic</label>
+    <input type="text" th:field="*{patronymic}" id="patronymic" placeholder="Patronymic">
+    <label for="phoneNumber">phoneNumber</label>
+    <input type="text" th:field="*{phoneNumber}" id="phoneNumber" placeholder="PhoneNumber">
+    <label for="email">email</label>
+    <input type="text" th:field="*{email}" id="email" placeholder="Email">
+    <input type="submit" value="Create Person">
+</form>
+</body>
+</html>
