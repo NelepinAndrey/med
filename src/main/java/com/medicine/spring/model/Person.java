@@ -5,12 +5,12 @@ import lombok.Data;
 
 import javax.persistence.*;
 
-@Data
-@Entity
-@Table(name = "person")
+@Data //Применяет сразу несколько аннотаций Lombok.
+@Entity //указываем что данный бин является сущностью
+@Table(name = "person") //указываем таблицу которая будет отображаться в сущности
 public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id //id колонки
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //указываем стратегию
     private Long id;
 
     @Column(name = "surname")

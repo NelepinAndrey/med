@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+@Service //объясняем что данный класс является компонентом спринга
 public class PersonService {
 
     private final PersonRepository personRepository;
 
-    @Autowired
+    @Autowired //инициализируем personRepository
     public PersonService(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }

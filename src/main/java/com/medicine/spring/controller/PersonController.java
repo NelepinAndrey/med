@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-@Controller
+@Controller//Указывает что это класс контроллер
 public class PersonController {
 
     private final PersonService personService;
@@ -21,7 +21,7 @@ public class PersonController {
         this.personService = personService;
     }
 
-    @GetMapping("/person")
+    @GetMapping("/person") //Обрабатывает get-запросы
     public String findAll(Model model) {
         List<Person> people = personService.findAll();
         model.addAttribute("people", people);
@@ -33,7 +33,7 @@ public class PersonController {
         return "person-create";
     }
 
-    @PostMapping("/person-create")
+    @PostMapping("/person-create") //Обрабатывает post-запросы
     public String createPerson(Person person) {
         personService.savePerson(person);
         return "redirect:/person";
